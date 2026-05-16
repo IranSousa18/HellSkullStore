@@ -1,3 +1,427 @@
-img{
-    height: 75px;
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    background: #050505;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+
+/* FUNDO ANIMADO */
+body::before{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:
+    radial-gradient(circle at top, rgba(255,0,0,0.2), transparent 40%),
+    radial-gradient(circle at bottom, rgba(255,80,0,0.15), transparent 40%);
+    z-index: -1;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 80px;
+
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255,0,0,0.3);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo h1{
+    color: #ff2a00;
+
+    font-size: 2rem;
+
+    text-shadow:
+    0 0 10px #ff0000,
+    0 0 20px #ff3300,
+    0 0 40px #ff0000;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: 0.3s;
+    position: relative;
+}
+
+/* EFEITO DIFERENTE */
+nav a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 2px;
+
+    background: #ff2a00;
+
+    transition: 0.4s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+nav a:hover{
+    color: #ff2a00;
+
+    text-shadow:
+    0 0 10px #ff0000;
+}
+
+/* MAIN */
+main{
+    padding: 50px 80px;
+}
+
+/* BANNER */
+.banner{
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+
+    box-shadow:
+    0 0 40px rgba(255,0,0,0.2);
+
+    margin-bottom: 60px;
+}
+
+/* TITULO BANNER */
+.banner h2{
+    font-size: 4rem;
+
+    color: #ff2a00;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+    0 0 20px red,
+    0 0 40px darkred;
+}
+
+/* TEXTO */
+.banner p{
+    font-size: 1.2rem;
+
+    color: #ccc;
+
+    margin-bottom: 30px;
+}
+
+/* BOTÃO */
+.banner button{
+    padding: 15px 40px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(45deg, #ff0000, #ff5e00);
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+    box-shadow:
+    0 0 20px rgba(255,0,0,0.5);
+}
+
+.banner button:hover{
+    transform: scale(1.08);
+
+    box-shadow:
+    0 0 30px red,
+    0 0 60px darkred;
+}
+
+/* PESQUISA */
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 60px;
+}
+
+.pesquisa input{
+    width: 400px;
+
+    padding: 15px;
+
+    border: 1px solid rgba(255,0,0,0.3);
+
+    border-radius: 12px;
+
+    background: #111;
+
+    color: white;
+
+    outline: none;
+}
+
+.pesquisa button{
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #ff2a00;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.pesquisa button:hover{
+    background: #ff0000;
+
+    box-shadow:
+    0 0 20px red;
+}
+
+/* TITULOS */
+section h2{
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+
+    color: #ff2a00;
+}
+
+/* CATEGORIAS */
+.categoriasContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 60px;
+}
+
+.categoriasContainer button{
+    padding: 12px 20px;
+
+    border: 1px solid rgba(255,0,0,0.3);
+
+    border-radius: 12px;
+
+    background: #111;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.categoriasContainer button:hover{
+    background: #ff2a00;
+
+    transform: translateY(-3px);
+}
+
+/* CARDS */
+.cardsJogos{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+}
+
+/* CARD */
+.card{
+    background: rgba(20,20,20,0.9);
+
+    border: 1px solid rgba(255,0,0,0.15);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    position: relative;
+}
+
+/* EFEITO DIFERENTE */
+.card::before{
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        130deg,
+        transparent,
+        rgba(255,0,0,0.15),
+        transparent
+    );
+
+    transform: translateX(-100%);
+
+    transition: 0.6s;
+}
+
+.card:hover::before{
+    transform: translateX(100%);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+
+    box-shadow:
+    0 0 30px rgba(255,0,0,0.3);
+}
+
+/* IMAGEM */
+.card img{
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+}
+
+/* TITULO CARD */
+.card h3{
+    padding: 20px 20px 10px;
+
+    color: white;
+}
+
+/* PREÇO */
+.card p{
+    padding: 0 20px;
+
+    color: #ff5e00;
+
+    font-weight: bold;
+}
+
+/* BOTÃO CARD */
+.card button{
+    margin: 20px;
+
+    width: calc(100% - 40px);
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(45deg, #ff0000, #ff5e00);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover{
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+footer{
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,0,0,0.2);
+
+    color: #777;
+}
+
+/* RESPONSIVIDADE */
+@media(max-width: 900px){
+
+    header{
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner h2{
+        font-size: 2.5rem;
+    }
+
+    .pesquisa{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pesquisa input{
+        width: 100%;
+    }
+
+    main{
+        padding: 30px;
+    }
+
 }

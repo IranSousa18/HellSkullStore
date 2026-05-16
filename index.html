@@ -8,9 +8,10 @@
     <title>HellSkull</title>
 </head>
 <body>
+    <!-- cabeçalho - coisas que fica na parte de cima da pagina -->
     <header>
-        <img src="img/Logo.png" alt="logo site">
         <h1>HellSkull</h1>
+        <!-- minha barra de navagar entre seçoes da pagina -->
         <nav>
             <a href="">Inicio</a>
             <a href="">Jogos</a>
@@ -18,10 +19,56 @@
             <a href="">Cotnato</a>
         </nav>
     </header>
+    <!-- conteudo principal da minha pagina -->
+    <main>
+        <section class="banner">
+            <h2>JOGOS INSANAMENTES INSANOS DE BONS</h2>
+            <P>Explore jogos exelentes</P>
+        </section>
+        <!-- barra de pesquisa -->
+        <section class="pesquisa">
+            <input id="pesquisaInput" placeholder="Buscar jogos...">
+            <button>Buscar</button>
+        <!-- Categorias -->
+        </section>
 
+        <section class="categorias">
+            <h2>Categorias</h2>
+            <div class="categoriasContainer">
+                <button>FPS</button>
+                <button>RPG</button>
+                <button>Soulslike</button>
+                <button>Roguelike</button>
+                <button>Metroidvania</button>
+            </div>
+        </section>
+        <!-- Jogos em destaque (propotipo) multiplciar eles dps, so copiar e colcoar dentro do section-->
+         <section class="cardJogos" id="todosJogos">
+            <div class="card">
+                <img src="" alt="">
+                <h3>nameGame</h3>
+                <p>0,00</p>
+                <button>Comprar</button>
+            </div>
+                <div class="card">
+                <img src="" alt="">
+                <h3>nameGame</h3>
+                <p>0,00</p>
+                <button>Comprar</button>
+            </div>
+         </section>
+
+
+         <section class="contato">
+            <p>Email: iran.csousa21@gmail.com</p>
+            <p>GiHub: github.com/hellskull</p>
+            <p>Steam: KAMIK4ZE44</p>
+
+         </section>
+    </main>
+    <!-- rodape - coisas que fica na parte de baixo da pagina-->
     <footer>
-        <p>Steam<a href="https://chatgpt.com/c/6a07a9fd-6cc0-83e9-ab2c-90b17942541a"> KAMIK4ZE</a></p>
-        <p>GitHub<a href=""> IranSousa18</a></p>
+        <P>HellSkull - Todos os direitos reservados</P>
     </footer>
     <script src="script.js"></script>
 </body>
