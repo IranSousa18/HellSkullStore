@@ -16,15 +16,19 @@ body{
     overflow-x: hidden;
 }
 
-/* FUNDO ANIMADO */
+/* FUNDO */
 body::before{
     content: "";
+
     position: fixed;
+
     width: 100%;
     height: 100%;
+
     background:
     radial-gradient(circle at top, rgba(255,0,0,0.2), transparent 40%),
     radial-gradient(circle at bottom, rgba(255,80,0,0.15), transparent 40%);
+
     z-index: -1;
 }
 
@@ -37,6 +41,7 @@ header{
     padding: 25px 80px;
 
     background: rgba(0,0,0,0.7);
+
     backdrop-filter: blur(10px);
 
     border-bottom: 1px solid rgba(255,0,0,0.3);
@@ -67,16 +72,18 @@ nav{
 
 nav a{
     color: white;
+
     text-decoration: none;
 
     font-size: 1rem;
     font-weight: 600;
 
     transition: 0.3s;
+
     position: relative;
 }
 
-/* EFEITO DIFERENTE */
+/* EFEITO NAV */
 nav a::after{
     content: "";
 
@@ -164,7 +171,8 @@ main{
     border: none;
     border-radius: 12px;
 
-    background: linear-gradient(45deg, #ff0000, #ff5e00);
+    background:
+    linear-gradient(45deg, #ff0000, #ff5e00);
 
     color: white;
 
@@ -191,6 +199,7 @@ main{
 .pesquisa{
     display: flex;
     justify-content: center;
+
     gap: 15px;
 
     margin-bottom: 60px;
@@ -247,6 +256,7 @@ section h2{
 .categoriasContainer{
     display: flex;
     flex-wrap: wrap;
+
     gap: 15px;
 
     margin-bottom: 60px;
@@ -274,20 +284,24 @@ section h2{
     transform: translateY(-3px);
 }
 
-/* CARDS */
+/* GRID DOS JOGOS */
 .cardsJogos{
     display: grid;
 
     grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
+    repeat(5,250px);
 
-    gap: 30px;
+    justify-content: center;
+
+    gap: 25px;
 
     margin-bottom: 60px;
 }
 
 /* CARD */
 .card{
+    width: 250px;
+
     background: rgba(20,20,20,0.9);
 
     border: 1px solid rgba(255,0,0,0.15);
@@ -301,7 +315,7 @@ section h2{
     position: relative;
 }
 
-/* EFEITO DIFERENTE */
+/* EFEITO CARD */
 .card::before{
     content: "";
 
@@ -327,30 +341,35 @@ section h2{
 }
 
 .card:hover{
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 
     box-shadow:
     0 0 30px rgba(255,0,0,0.3);
 }
 
-/* IMAGEM */
+/* IMAGEM CARD */
 .card img{
     width: 100%;
-    height: 320px;
+
+    height: 240px;
 
     object-fit: cover;
 }
 
 /* TITULO CARD */
 .card h3{
-    padding: 20px 20px 10px;
+    padding: 15px 15px 8px;
+
+    font-size: 1rem;
 
     color: white;
 }
 
 /* PREÇO */
 .card p{
-    padding: 0 20px;
+    padding: 0 15px;
+
+    font-size: 0.9rem;
 
     color: #ff5e00;
 
@@ -359,18 +378,21 @@ section h2{
 
 /* BOTÃO CARD */
 .card button{
-    margin: 20px;
+    margin: 15px;
 
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
 
-    padding: 12px;
+    padding: 10px;
 
     border: none;
     border-radius: 10px;
 
-    background: linear-gradient(45deg, #ff0000, #ff5e00);
+    background:
+    linear-gradient(45deg, #ff0000, #ff5e00);
 
     color: white;
+
+    font-size: 0.9rem;
 
     cursor: pointer;
 
@@ -379,6 +401,9 @@ section h2{
 
 .card button:hover{
     transform: scale(1.03);
+
+    box-shadow:
+    0 0 15px red;
 }
 
 /* FOOTER */
@@ -397,6 +422,7 @@ footer{
 
     header{
         flex-direction: column;
+
         gap: 20px;
 
         padding: 25px;
@@ -404,6 +430,7 @@ footer{
 
     nav{
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
@@ -413,6 +440,7 @@ footer{
 
     .pesquisa{
         flex-direction: column;
+
         align-items: center;
     }
 
