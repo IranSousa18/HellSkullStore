@@ -300,7 +300,7 @@ section h2{
 
 /* CARD */
 .card{
-    width: 250px;
+    width: 237px;
 
     background: rgba(20,20,20,0.9);
 
@@ -313,6 +313,8 @@ section h2{
     transition: 0.4s;
 
     position: relative;
+
+    text-align: center;
 }
 
 /* EFEITO CARD */
@@ -353,7 +355,7 @@ section h2{
 
     height: 240px;
 
-    object-fit: cover;
+    display: block;
 }
 
 /* TITULO CARD */
