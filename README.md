@@ -16,12 +16,10 @@ O projeto foi criado com foco no aprendizado e prática de conceitos fundamentai
 
 ## 🎲 Categorias Disponíveis
 
-- 🗡️ RPG
-- 💀 Soulslike
+- 🗡️ Soulslike
 - 🎲 Roguelike
 - 🏰 Metroidvania
 - 🌲 Survival
-- 🌎 Mundo Aberto
 - 👻 Horror
 
 ## 🛠️ Tecnologias Utilizadas
@@ -55,10 +53,7 @@ HellSkull/
 ├── js/
 │   └── script.js
 ├── assets/
-│   ├── imagens/
-│   ├── logo/
-│   └── banner/
-│
+│   └── imagens
 └── README.md
 ```
 
@@ -78,29 +73,14 @@ cd HellSkull
 
 3. Abra o arquivo `index.html` em seu navegador.
 
-## 📸 Preview
+## Site
 
-Adicione aqui capturas de tela da aplicação:
-
-```md
-![Página Inicial](./assets/home.png)
-
-![Catálogo de Jogos](./assets/catalogo.png)
-```
+https://iransousa18.github.io/HellSkullStore/
 
 ## 🎯 Objetivo do Projeto
 
 O principal objetivo da HellSkull é proporcionar uma maneira simples e eficiente de explorar jogos de diferentes gêneros, além de servir como um projeto de aprendizado para aprimorar habilidades em desenvolvimento Front-End.
 
-## 🔮 Melhorias Futuras
-
-- ⭐ Sistema de favoritos
-- ❤️ Avaliação dos jogos
-- 🌙 Modo escuro
-- 📄 Página individual para cada jogo
-- 🔗 Integração com APIs de jogos
-- 🎮 Ampliação do catálogo
-- 📊 Sistema de recomendações
 
 ## 👨‍💻 Autor
 
